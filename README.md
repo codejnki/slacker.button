@@ -14,7 +14,7 @@ To insall this library just place the entire sub folder in your library foler.
 // Toggle will switch state on each button press much like a lightswitch
 
 slacker::Button::ButtonType _buttonType = slacker::Button::ButtonType::Momentary;
-slacker::Button::Button _button(2, _buttonType);
+slacker::Button _button(2, _buttonType);
 
 // your code goes here
 ```
