@@ -2,9 +2,9 @@
 
 An exceedingly simple button class to help with things.  Utilizes a 200 ms debounce.
 
-## Installation and useage
+## Installation and usage
 
-To insall this library just place the entire sub folder in your library foler.
+To install this library just place the entire sub folder in your library folder.
 
 ```cpp
 #include <button.h>

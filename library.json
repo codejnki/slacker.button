@@ -1,0 +1,17 @@
+{
+  "name" : "slacker.button",
+  "keywords" : "arduino, button, slacker",
+  "description" : "A utility library for Arduino that gives some easy methods for buttons",
+  "authors" :
+  {
+    "name" : "Patrick Stockton",
+    "url" : "http://www.naslacker.com"
+  },
+  "repository" :
+  {
+    "type" : "git",
+    "url" : "https://github.com/codejnki/slacker.button.git"
+  },
+  "frameworks" : "arduino",
+  "platforms" : "atmelavr"
+}
