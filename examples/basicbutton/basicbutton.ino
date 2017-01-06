@@ -6,7 +6,7 @@
 */
 
 #include <led.h>
-#include <button.h>
+#include <button.hpp>
 
 // To see the two various modes a button can act uncomment this line and comment the other one out
 // slacker::Button::ButtonType _buttonType = slacker::Button::ButtonType::Toggle;
