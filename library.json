@@ -12,6 +12,7 @@
     "type" : "git",
     "url" : "https://github.com/codejnki/slacker.button.git"
   },
+  "version" : "2.0.0",
   "frameworks" : "arduino",
   "platforms" : "atmelavr"
 }
