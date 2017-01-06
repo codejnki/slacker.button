@@ -5,19 +5,24 @@
 */
 
 #include "Arduino.h"
-#include "button.h"
+#include "button.hpp"
 
 namespace slacker
 {
   unsigned long lastDebounceTime = 0;
-  unsigned long debounceDelay = 200;
+  unsigned long _debounceDelay = 0;
+  int _counter = 0;
 
-  Button::Button(int pin, Button::ButtonType buttonType)
+  Button::Button(int pin, Button::ButtonType buttonType) :  
+    Button::Button(pin, buttonType, 200) { }
+  
+  Button::Button(int pin, Button::ButtonType buttonType, long debounceDelay)
   {
     _pin = pin;
     _lastButtonState = LOW;
     _buttonType = buttonType;
     _switchState = false;
+    _debounceDelay = debounceDelay;
     pinMode(_pin, INPUT);
   }
 
@@ -31,20 +36,33 @@ namespace slacker
       case Toggle:
         return this -> ReadToggle();
         break;
+      default:
+        return false;
+        break;
     }
+  }
+
+  int Button::GetButtonCounter()
+  {
+    return _counter;
+  }
+  
+  void Button::ResetButtonCounter()
+  {
+    _counter = 0;
   }
 
   bool Button::ReadMomentary()
   {
     int buttonRead = digitalRead(_pin);
 
-    if(buttonRead == _lastButtonState == false)
+    if((buttonRead == _lastButtonState) == false)
     {
       lastDebounceTime = millis();
     }
 
-    if((millis() - lastDebounceTime) > debounceDelay) {
-      if(buttonRead == _buttonState == false)
+    if((millis() - lastDebounceTime) > _debounceDelay) {
+      if((buttonRead == _buttonState) == false)
       {
         _buttonState = buttonRead;
       }
@@ -64,7 +82,7 @@ namespace slacker
     // to not worry about it at the moment, it does what i need it to
 
     int reading = digitalRead(_pin);
-    if(reading == HIGH && _previous == LOW && millis() - _time > debounceDelay)
+    if(reading == HIGH && _previous == LOW && millis() - _time > _debounceDelay)
     {
       if(_switchState == HIGH)
       {
@@ -72,6 +90,7 @@ namespace slacker
       }
       else
       {
+        _counter++;
         _switchState = HIGH;
       }
       _time = millis();

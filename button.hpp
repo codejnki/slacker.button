@@ -1,7 +1,7 @@
 /*
   button.h - button library for using a button
   Created by Patrick Stockton
-  version: 0.0.1
+  version: 2.0.0
 */
 
 #ifndef button_h
@@ -16,7 +16,10 @@ namespace slacker
     public:
       enum ButtonType { Momentary, Toggle };
       Button(int pin, Button::ButtonType buttonType);
+      Button(int pin, Button::ButtonType buttonType, long debounceDelay);
       bool ButtonPressed();
+      int GetButtonCounter();
+      void ResetButtonCounter();
     private:
       int _pin;
       int _lastButtonState;
