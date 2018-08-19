@@ -5,7 +5,7 @@
   version: 0.0.1
 */
 
-#include <led.h>
+#include <led.hpp>
 #include <button.hpp>
 
 // To see the two various modes a button can act uncomment this line and comment the other one out

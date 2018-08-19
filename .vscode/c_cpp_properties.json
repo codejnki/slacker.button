@@ -1,35 +1,43 @@
 {
-  "configurations": [
-    {
-      "name": "Mac",
-      "includePath": [
-        "/usr/include",
-        "/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/cores/arduino"
-      ],
-      "browse": {
-        "limitSymbolsToIncludedHeaders": true,
-        "databaseFilename": ""
-      }
-    },
-    {
-      "name": "Linux",
-      "includePath": [
-        "/usr/include"
-      ],
-      "browse": {
-        "limitSymbolsToIncludedHeaders": true,
-        "databaseFilename": ""
-      }
-    },
-    {
-      "name": "Win32",
-      "includePath": [
-        "c:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include"
-      ],
-      "browse": {
-        "limitSymbolsToIncludedHeaders": true,
-        "databaseFilename": ""
-      }
-    }
-  ]
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "/usr/include",
+                "/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/cores/arduino"
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "macFrameworkPath": [
+                "/System/Library/Frameworks",
+                "/Library/Frameworks"
+            ],
+            "intelliSenseMode": "clang-x64"
+        },
+        {
+            "name": "Linux",
+            "includePath": [
+                "/usr/include"
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "intelliSenseMode": "gcc-x64"
+        },
+        {
+            "name": "Win32",
+            "includePath": [
+                "c:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include"
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "intelliSenseMode": "msvc-x64"
+        }
+    ],
+    "version": 4
 }
