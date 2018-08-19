@@ -23,7 +23,7 @@ slacker::Button _button(2, _buttonType);
 // your code goes here
 ```
 
-There is a new constructor that will take the debounce time as a parameter.  Using the older constructor defaults to the 200 ms.
+There is a new constructor that will take the debounce time as a parameter.  Using the older constructor defaults to the 200 ms.  Personally I think about 175ms debounce is pretty good.
 
 ## Methods
 
